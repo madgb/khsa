@@ -3,6 +3,7 @@
 }
 .image-wrapper{
     position: relative;
+    align-items: center;
 }
 .image-wrapper .link, .image-wrapper .mobile-link{
     position: absolute;
