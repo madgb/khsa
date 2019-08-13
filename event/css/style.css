@@ -43,6 +43,7 @@
     display: -webkit-flex; 
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
 }
 .desktop{
     display: -webkit-box; 
