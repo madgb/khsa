@@ -68,7 +68,7 @@
             </a>
         </div>
         <div class="section" id="section3">
-            <div class="wrapper">
+            <div class="wrapper get-transform-center">
                 <img src="image/mobile/carocap.png" class="carocap" alt="mobile_image">
                 <!-- <div class="link">
                     <a href="https://khsa.or.kr" target="_blank"></a>
@@ -254,19 +254,15 @@
                 if (window.innerHeight < 667 && window.innerHeight > 550) {
                     mobileLastWrapper.style.width = '85%';
                     mobileLastWrapper.classList.add('get-center');
-                    wrapper.classList.add('get-transform-center');
                 } else if (window.innerHeight <= 550 && window.innerHeight > 500){
                     mobileLastWrapper.style.width = '75%';
                     mobileLastWrapper.classList.add('get-center');
-                    wrapper.classList.add('get-transform-center');
                 } else if (window.innerHeight <= 500){
                     mobileLastWrapper.style.width = '70%';
                     mobileLastWrapper.classList.add('get-center');
-                    wrapper.classList.add('get-transform-center');
                 } else {
                     mobileLastWrapper.style.height = 'auto';
                     mobileLastWrapper.classList.remove('get-center');
-                    wrapper.classList.remove('get-transform-center');
                 }
 
                 if(window.innerWidth < 1200) {

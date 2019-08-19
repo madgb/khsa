@@ -356,19 +356,19 @@
   overflow: hidden;
 }
 
-@media(max-width: 1024px){
+@media(max-width: 1024px) {
   .video {
     max-width: 400px;
   }
 }
 
-@media(max-width: 1440px){
+@media(max-width: 1440px) {
   .video {
     max-width: 500px;
   }
 }
 
-@media(max-width: 1800px){
+@media(max-width: 1800px) {
   .video {
     max-width: 600px;
   }
@@ -385,13 +385,16 @@
 .desktop-first {
   max-width: 1700px;
 }
+
 .mobile #section1 .fp-tableCell {
   position: relative;
 }
-.mobile #section1 .fp-tableCell .mobile-title{
+
+.mobile #section1 .fp-tableCell .mobile-title {
   position: absolute;
   padding-top: 20px;
 }
+
 #section2 img,
 #section3 img {
   max-width: 2200px;
