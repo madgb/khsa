@@ -154,8 +154,8 @@
 .prev .fas::after {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   display: inline-block;
   border: 1px solid;
   border-radius: 50%;
@@ -166,8 +166,8 @@
 .next .fas::after {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   display: inline-block;
   border: 1px solid;
   border-radius: 50%;
