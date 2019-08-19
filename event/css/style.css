@@ -237,7 +237,7 @@
   width: 100%;
 }
 
-#section0 {
+#section0 > div{
   background: rgba(218, 238, 245, 1);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(218, 238, 245, 1)), color-stop(50%, rgba(218, 238, 245, 1)), color-stop(51%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
   background: -o-linear-gradient(top, rgba(218, 238, 245, 1) 0%, rgba(218, 238, 245, 1) 50%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
