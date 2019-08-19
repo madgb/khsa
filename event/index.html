@@ -60,7 +60,7 @@
             </a>
         </div>
         <div class="section" id="section3">
-            <img src="image/mobile/carocap.png" alt="mobile_image">
+            <img src="image/mobile/carocap.png" class="carocap" alt="mobile_image">
             <!-- <div class="link">
                 <a href="https://khsa.or.kr" target="_blank"></a>
             </div> -->
@@ -189,14 +189,66 @@
             }
 
             function applyChanges() {
+                var mobileFirstPic = document.querySelector('.mobile #section0 img');
+
+                if (window.innerHeight > 667) {
+                    mobileFirstPic.style.height = 'auto';
+                    mobileFirstPic.classList.add('get-transform-center');
+                } else if (window.innerHeight < 666 && window.innerHeight > 550){
+                    mobileFirstPic.style.width = '85%';
+                    mobileFirstPic.parentElement.style.background = '#d9eef5';
+                    mobileFirstPic.classList.add('get-center');
+                    desktopYellow.classList.add('get-transform-center');
+                } else if (window.innerHeight <= 550 && window.innerHeight > 500){
+                    mobileFirstPic.style.width = '75%';
+                    mobileFirstPic.parentElement.style.background = '#d9eef5';
+                    mobileFirstPic.classList.add('get-center');
+                    desktopYellow.classList.add('get-transform-center');
+                } else if (window.innerHeight <= 500 && window.innerHeight > 450){
+                    mobileFirstPic.style.width = '70%';
+                    mobileFirstPic.parentElement.style.background = '#d9eef5';
+                    mobileFirstPic.classList.add('get-center');
+                    desktopYellow.classList.add('get-transform-center');
+                } else if (window.innerHeight <= 450){
+                    mobileFirstPic.style.width = '65%';
+                    mobileFirstPic.parentElement.style.background = '#d9eef5';
+                    mobileFirstPic.classList.add('get-center');
+                    desktopYellow.classList.add('get-transform-center');
+                } else {
+                    mobileFirstPic.style.height = '100%';
+                    mobileFirstPic.classList.remove('get-transform-center');
+                }
+
                 var mobileYellowPic = document.querySelector('.mobile-yellow');
 
                 if (window.innerHeight > 667) {
                     mobileYellowPic.style.height = 'auto';
                     mobileYellowPic.classList.add('get-transform-center');
-                } else {
+                }else if (window.innerHeight < 550 && window.innerHeight > 500){
+                    mobileYellowPic.style.width = '75%';
+                    mobileYellowPic.classList.add('get-center');
+                } else if (window.innerHeight <= 500){
+                    mobileYellowPic.style.width = '70%';
+                    mobileYellowPic.classList.add('get-center');
+                }  else {
                     mobileYellowPic.style.height = '100%';
                     mobileYellowPic.classList.remove('get-transform-center');
+                }
+
+                var mobileLastWrapper = document.querySelector('.mobile #section3 > div');
+
+                if (window.innerHeight < 667 && window.innerHeight > 550) {
+                    mobileLastWrapper.style.width = '85%';
+                    mobileLastWrapper.classList.add('get-center');
+                } else if (window.innerHeight <= 550 && window.innerHeight > 500){
+                    mobileLastWrapper.style.width = '75%';
+                    mobileLastWrapper.classList.add('get-center');
+                } else if (window.innerHeight <= 500){
+                    mobileLastWrapper.style.width = '70%';
+                    mobileLastWrapper.classList.add('get-center');
+                } else {
+                    mobileLastWrapper.style.height = 'auto';
+                    mobileLastWrapper.classList.remove('get-center');
                 }
 
                 var desktopFirst = document.querySelector('.desktop-first');
