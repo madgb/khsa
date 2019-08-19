@@ -46,14 +46,19 @@
     </div>
     <div class="mobile image-wrapper">
         <div class="section active" id="section0">
-            <img src="image/mobile/top.png" alt="mobile_image">
+            <div class="get-transform-center">
+                <img src="image/mobile/top.png" alt="mobile_image">
+            </div>
         </div>
         <div class="section" id="section1">
-            <div class="video">
-                <video controls poster="image/poster.png">
-                    <source src="image/video.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
+            <div class="wrapper get-transform-center">
+                <img class="mobile-title" src="image/mobile/title.png" alt="desktop_image">
+                <div class="video">
+                    <video controls poster="image/poster.png">
+                        <source src="image/video.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                </div>
             </div>
         </div>
         <div class="section" id="section2">
@@ -63,37 +68,39 @@
             </a>
         </div>
         <div class="section" id="section3">
-            <img src="image/mobile/carocap.png" class="carocap" alt="mobile_image">
-            <!-- <div class="link">
-                <a href="https://khsa.or.kr" target="_blank"></a>
-            </div> -->
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
+            <div class="wrapper">
+                <img src="image/mobile/carocap.png" class="carocap" alt="mobile_image">
+                <!-- <div class="link">
+                    <a href="https://khsa.or.kr" target="_blank"></a>
+                </div> -->
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
 
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <img src="image/mobile/caro1.png" style="width:100%">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <img src="image/mobile/caro1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="image/mobile/caro2.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="image/mobile/caro3.png" style="width:100%">
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">
+                        <span class="angle angle-prev"></span>
+                    </a>
+                    <a class="next" onclick="plusSlides(1)">
+                        <span class="angle angle-next"></span>
+                    </a>
                 </div>
-
-                <div class="mySlides fade">
-                    <img src="image/mobile/caro2.png" style="width:100%">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="image/mobile/caro3.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">
-                    <span class="angle angle-prev"></span>
-                </a>
-                <a class="next" onclick="plusSlides(1)">
-                    <span class="angle angle-next"></span>
+                <a href="https://khsa.or.kr" class="w-100" target="_blank">
+                    <img class="mobile-last-button" src="image/mobile/button2.png" alt="mobile_image">
                 </a>
             </div>
-            <a href="https://khsa.or.kr" class="w-100" target="_blank">
-                <img class="mobile-last-button" src="image/mobile/button2.png" alt="mobile_image">
-            </a>
         </div>
     </div>
     <script>
@@ -192,35 +199,35 @@
             }
 
             function applyChanges() {
-                var mobileFirstPic = document.querySelector('.mobile #section0 img');
+                // var mobileFirstPic = document.querySelector('.mobile #section0 img');
 
-                if (window.innerHeight > 667) {
-                    mobileFirstPic.style.height = 'auto';
-                    mobileFirstPic.classList.add('get-transform-center');
-                } else if (window.innerHeight < 666 && window.innerHeight > 550){
-                    mobileFirstPic.style.width = '85%';
-                    mobileFirstPic.parentElement.style.background = '#d9eef5';
-                    mobileFirstPic.classList.add('get-center');
-                    mobileFirstPic.classList.add('get-transform-center');
-                } else if (window.innerHeight <= 550 && window.innerHeight > 500){
-                    mobileFirstPic.style.width = '75%';
-                    mobileFirstPic.parentElement.style.background = '#d9eef5';
-                    mobileFirstPic.classList.add('get-center');
-                    mobileFirstPic.classList.add('get-transform-center');
-                } else if (window.innerHeight <= 500 && window.innerHeight > 450){
-                    mobileFirstPic.style.width = '70%';
-                    mobileFirstPic.parentElement.style.background = '#d9eef5';
-                    mobileFirstPic.classList.add('get-center');
-                    mobileFirstPic.classList.add('get-transform-center');
-                } else if (window.innerHeight <= 450){
-                    mobileFirstPic.style.width = '65%';
-                    mobileFirstPic.parentElement.style.background = '#d9eef5';
-                    mobileFirstPic.classList.add('get-center');
-                    mobileFirstPic.classList.add('get-transform-center');
-                } else {
-                    mobileFirstPic.style.height = '100%';
-                    mobileFirstPic.classList.remove('get-transform-center');
-                }
+                // if (window.innerHeight > 667) {
+                //     mobileFirstPic.style.height = 'auto';
+                //     mobileFirstPic.classList.add('get-transform-center');
+                // } else if (window.innerHeight < 666 && window.innerHeight > 550){
+                //     mobileFirstPic.style.width = '85%';
+                //     mobileFirstPic.parentElement.style.background = '#d9eef5';
+                //     mobileFirstPic.classList.add('get-center');
+                //     mobileFirstPic.classList.add('get-transform-center');
+                // } else if (window.innerHeight <= 550 && window.innerHeight > 500){
+                //     mobileFirstPic.style.width = '75%';
+                //     mobileFirstPic.parentElement.style.background = '#d9eef5';
+                //     mobileFirstPic.classList.add('get-center');
+                //     mobileFirstPic.classList.add('get-transform-center');
+                // } else if (window.innerHeight <= 500 && window.innerHeight > 450){
+                //     mobileFirstPic.style.width = '70%';
+                //     mobileFirstPic.parentElement.style.background = '#d9eef5';
+                //     mobileFirstPic.classList.add('get-center');
+                //     mobileFirstPic.classList.add('get-transform-center');
+                // } else if (window.innerHeight <= 450){
+                //     mobileFirstPic.style.width = '65%';
+                //     mobileFirstPic.parentElement.style.background = '#d9eef5';
+                //     mobileFirstPic.classList.add('get-center');
+                //     mobileFirstPic.classList.add('get-transform-center');
+                // } else {
+                //     mobileFirstPic.style.height = '100%';
+                //     mobileFirstPic.classList.remove('get-transform-center');
+                // }
 
                 var mobileYellowPic = document.querySelector('.mobile-yellow');
 
@@ -230,28 +237,36 @@
                 }else if (window.innerHeight < 550 && window.innerHeight > 500){
                     mobileYellowPic.style.width = '75%';
                     mobileYellowPic.classList.add('get-center');
+                    mobileYellowPic.classList.add('get-transform-center');
                 } else if (window.innerHeight <= 500){
                     mobileYellowPic.style.width = '70%';
                     mobileYellowPic.classList.add('get-center');
+                    mobileYellowPic.classList.add('get-transform-center');
                 }  else {
                     mobileYellowPic.style.height = '100%';
                     mobileYellowPic.classList.remove('get-transform-center');
                 }
 
                 var mobileLastWrapper = document.querySelector('.mobile #section3 > div');
+                var center = document.querySelector('.mobile #section3 div.fp-tableCell');
+                var wrapper = document.querySelector('.mobile #section3 .wrapper');
 
                 if (window.innerHeight < 667 && window.innerHeight > 550) {
                     mobileLastWrapper.style.width = '85%';
                     mobileLastWrapper.classList.add('get-center');
+                    wrapper.classList.add('get-transform-center');
                 } else if (window.innerHeight <= 550 && window.innerHeight > 500){
                     mobileLastWrapper.style.width = '75%';
                     mobileLastWrapper.classList.add('get-center');
+                    wrapper.classList.add('get-transform-center');
                 } else if (window.innerHeight <= 500){
                     mobileLastWrapper.style.width = '70%';
                     mobileLastWrapper.classList.add('get-center');
+                    wrapper.classList.add('get-transform-center');
                 } else {
                     mobileLastWrapper.style.height = 'auto';
                     mobileLastWrapper.classList.remove('get-center');
+                    wrapper.classList.remove('get-transform-center');
                 }
 
                 if(window.innerWidth < 1200) {
