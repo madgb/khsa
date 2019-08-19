@@ -248,28 +248,25 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#daeef5', endColorstr='#ffffff', GradientType=0);
 }
 
-.desktop #section0 img {
+.desktop #section3 {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+}
+
+.desktop #section3 .link {
+  bottom: 0;
+  height: 320px;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  cursor: pointer;
+  position: absolute;
 }
 
 .desktop #section1 {
   width: 100%;
   background: #fff;
-}
-
-.desktop #section2 .wrapper,
-#section3 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
 }
 
 .desktop #section2>div {

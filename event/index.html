@@ -198,22 +198,22 @@
                     mobileFirstPic.style.width = '85%';
                     mobileFirstPic.parentElement.style.background = '#d9eef5';
                     mobileFirstPic.classList.add('get-center');
-                    desktopYellow.classList.add('get-transform-center');
+                    mobileFirstPic.classList.add('get-transform-center');
                 } else if (window.innerHeight <= 550 && window.innerHeight > 500){
                     mobileFirstPic.style.width = '75%';
                     mobileFirstPic.parentElement.style.background = '#d9eef5';
                     mobileFirstPic.classList.add('get-center');
-                    desktopYellow.classList.add('get-transform-center');
+                    mobileFirstPic.classList.add('get-transform-center');
                 } else if (window.innerHeight <= 500 && window.innerHeight > 450){
                     mobileFirstPic.style.width = '70%';
                     mobileFirstPic.parentElement.style.background = '#d9eef5';
                     mobileFirstPic.classList.add('get-center');
-                    desktopYellow.classList.add('get-transform-center');
+                    mobileFirstPic.classList.add('get-transform-center');
                 } else if (window.innerHeight <= 450){
                     mobileFirstPic.style.width = '65%';
                     mobileFirstPic.parentElement.style.background = '#d9eef5';
                     mobileFirstPic.classList.add('get-center');
-                    desktopYellow.classList.add('get-transform-center');
+                    mobileFirstPic.classList.add('get-transform-center');
                 } else {
                     mobileFirstPic.style.height = '100%';
                     mobileFirstPic.classList.remove('get-transform-center');
@@ -251,32 +251,140 @@
                     mobileLastWrapper.classList.remove('get-center');
                 }
 
-                var desktopFirst = document.querySelector('.desktop-first');
-
-                if (window.innerHeight > 820) {
-                    desktopFirst.style.height = 'auto';
-                } else {
-                    desktopFirst.style.height = '100%';
-                }
-
-                var desktopYellow = document.querySelector('.desktop #section2 .wrapper');
-
-                if (window.innerHeight > 820) {
-                    desktopYellow.style.height = 'auto';
-                    desktopYellow.classList.add('get-transform-center');
-                } else {
-                    desktopYellow.style.height = '100%';
-                    desktopYellow.classList.remove('get-transform-center');
-                }
-
-                var desktopThird = document.querySelector('.desktop #section3 .wrapper');
-
-                if (window.innerHeight > 820) {
-                    desktopThird.style.height = 'auto';
-                    desktopThird.classList.add('get-transform-center');
-                } else {
-                    desktopThird.style.height = '100%';
-                    desktopThird.classList.remove('get-transform-center');
+                if(window.innerWidth < 1200) {
+                    var desktopFirst = document.querySelector('.desktop-first');
+    
+                    if (window.innerHeight >= 580) {
+                        desktopFirst.style.height = 'auto';
+                        desktopFirst.classList.add('get-transform-center');
+                        desktopFirst.classList.add('get-center');
+                    } else if (window.innerHeight >= 450 && window.innerHeight < 580) {
+                        desktopFirst.style.height = 'auto';
+                        desktopFirst.style.width = '80%';
+                        desktopFirst.classList.add('get-transform-center');
+                        desktopFirst.classList.add('get-center');
+                        desktopFirst.parentElement.style.background = '#d9eef5';
+                    } else if (window.innerHeight < 450) {
+                        desktopFirst.style.height = 'auto';
+                        desktopFirst.style.width = '70%';
+                        desktopFirst.classList.add('get-transform-center');
+                        desktopFirst.classList.add('get-center');
+                        desktopFirst.parentElement.style.background = '#d9eef5';
+                    } else {
+                        desktopFirst.style.height = '100%';
+                        desktopFirst.classList.remove('get-transform-center');
+                    }
+    
+                    var desktopYellow = document.querySelector('.desktop #section2 .wrapper');
+    
+                    if (window.innerHeight >= 580) {
+                        desktopYellow.style.height = 'auto';
+                        desktopYellow.classList.add('get-transform-center');
+                        desktopYellow.classList.add('get-center');
+                    } else if (window.innerHeight >= 450 && window.innerHeight < 580) {
+                        desktopYellow.style.height = 'auto';
+                        desktopYellow.style.width = '90%';
+                        desktopYellow.classList.add('get-transform-center');
+                        desktopYellow.classList.add('get-center');
+                    } else if (window.innerHeight < 450) {
+                        desktopYellow.style.height = 'auto';
+                        desktopYellow.style.width = '80%';
+                        desktopYellow.classList.add('get-transform-center');
+                        desktopYellow.classList.add('get-center');
+                    } else {
+                        desktopYellow.style.height = '100%';
+                        desktopYellow.classList.remove('get-transform-center');
+                    }
+    
+                    var desktopThird = document.querySelector('.desktop #section3 .wrapper');
+    
+                    if (window.innerHeight >= 580) {
+                        desktopThird.style.height = 'auto';
+                        desktopThird.classList.add('get-transform-center');
+                        desktopThird.classList.add('get-center');
+                    } else if (window.innerHeight >= 450 && window.innerHeight < 580) {
+                        desktopThird.style.height = 'auto';
+                        desktopThird.style.width = '90%';
+                        desktopThird.classList.add('get-transform-center');
+                        desktopThird.classList.add('get-center');
+                    } else if (window.innerHeight < 450) {
+                        desktopThird.style.height = 'auto';
+                        desktopThird.style.width = '80%';
+                        desktopThird.classList.add('get-transform-center');
+                        desktopThird.classList.add('get-center');
+                    } else {
+                        desktopThird.style.height = '100%';
+                        desktopThird.classList.remove('get-transform-center');
+                    }
+                } else if (window.innerWidth >= 1200) {
+                    var desktopFirst = document.querySelector('.desktop-first');
+    
+                    if (window.innerHeight >= 680 && window.innerHeight < 840) {
+                        desktopFirst.style.height = '100%';
+                        desktopFirst.classList.add('get-transform-center');
+                        desktopFirst.classList.add('get-center');
+                    } else if (window.innerHeight >= 580 && window.innerHeight < 680) {
+                        desktopFirst.style.height = 'auto';
+                        desktopFirst.style.width = '80%';
+                        desktopFirst.classList.add('get-transform-center');
+                        desktopFirst.classList.add('get-center');
+                        desktopFirst.parentElement.style.background = '#d9eef5';
+                    } else if (window.innerHeight >= 450 && window.innerHeight < 580) {
+                        desktopFirst.style.height = 'auto';
+                        desktopFirst.style.width = '60%';
+                        desktopFirst.classList.add('get-transform-center');
+                        desktopFirst.classList.add('get-center');
+                        desktopFirst.parentElement.style.background = '#d9eef5';
+                    } else if (window.innerHeight < 450) {
+                        desktopFirst.style.height = 'auto';
+                        desktopFirst.style.width = '50%';
+                        desktopFirst.classList.add('get-transform-center');
+                        desktopFirst.classList.add('get-center');
+                        desktopFirst.parentElement.style.background = '#d9eef5';
+                    } else {
+                        desktopFirst.style.height = 'auto';
+                        desktopFirst.classList.add('get-transform-center');
+                    }
+    
+                    var desktopYellow = document.querySelector('.desktop #section2 .wrapper');
+    
+                    if (window.innerHeight >= 580) {
+                        desktopYellow.style.height = 'auto';
+                        desktopYellow.classList.add('get-transform-center');
+                        desktopYellow.classList.add('get-center');
+                    } else if (window.innerHeight >= 450 && window.innerHeight < 580) {
+                        desktopYellow.style.height = 'auto';
+                        desktopYellow.style.width = '70%';
+                        desktopYellow.classList.add('get-transform-center');
+                        desktopYellow.classList.add('get-center');
+                    } else if (window.innerHeight < 450) {
+                        desktopYellow.style.height = 'auto';
+                        desktopYellow.style.width = '80%';
+                        desktopYellow.classList.add('get-transform-center');
+                        desktopYellow.classList.add('get-center');
+                    } else {
+                        desktopYellow.style.height = '100%';
+                        desktopYellow.classList.remove('get-transform-center');
+                    }
+    
+                    var desktopThird = document.querySelector('.desktop #section3 .wrapper');
+    
+                    if (window.innerHeight >= 650) {
+                        desktopThird.style.height = 'auto';
+                        desktopThird.classList.add('get-transform-center');
+                        desktopThird.classList.add('get-center');
+                    } else if (window.innerHeight >= 450 && window.innerHeight < 650) {
+                        desktopThird.style.height = 'auto';
+                        desktopThird.style.width = '90%';
+                        desktopThird.classList.add('get-center');
+                    } else if (window.innerHeight < 450) {
+                        desktopThird.style.height = 'auto';
+                        desktopThird.style.width = '80%';
+                        desktopThird.classList.add('get-center');
+                    } else {
+                        desktopThird.style.height = '100%';
+                        desktopThird.classList.remove('get-transform-center');
+                    }
                 }
             }
         })();
