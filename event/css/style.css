@@ -332,7 +332,7 @@
   padding-top: 7px;
 }
 
-.mobile #section3>div {
+/* .mobile #section3>div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,7 +342,7 @@
   flex-flow: row wrap;
   -ms-flex-line-pack: center;
   align-content: center;
-}
+} */
 
 .mobile #section3 .mySlides img {
   width: 75% !important;
