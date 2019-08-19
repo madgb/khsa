@@ -43,10 +43,10 @@
         </div>
         <div class="section" id="section1">
             <iframe src="https://player.vimeo.com/video/353080101?title=0&byline=0&portrait=0" frameborder="0"
-            allow="autoplay; fullscreen" allowfullscreen></iframe>
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
         <div class="section" id="section2">
-            <img src="image/mobile/mid.png" alt="mobile_image">
+            <img class="mobile-yellow" src="image/mobile/mid.png" alt="mobile_image">
             <a href="https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionality.do?menu_grp=MENU_NEW01&menu_no=2657"
                 class="w-100" target="_blank">
             </a>
@@ -130,10 +130,69 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
+
+        // var target = document.querySelector('.mobile-yellow');
+
+        // var observer = new MutationObserver(function (mutations) {
+        //     mutations.forEach(function (mutation) {
+        //         adjustHeight();
+        //     });
+        // });
+
+        // var config = {
+        //     attributes: true,
+        //     childList: true,
+        //     characterData: true
+        // };
+
+        // observer.observe(target, config);
+
+        // function adjustHeight() {
+        //     var mobileYellowPic = document.querySelector('.mobile-yellow');
+        //     if (window.innerHeight > 667) {
+        //         mobileYellowPic.style.height = 'auto';
+        //         mobileYellowPic.classList.add('get-transform-center');
+        //     } else {
+        //         mobileYellowPic.style.height = '100%';
+        //         mobileYellowPic.classList.remove('get-transform-center');
+        //     }
+        // }
     </script>
     <script type="text/javascript" src="js/fullpage.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage');
+    </script>
+    <script>
+        var removeDiscountBadgeTestObservationAug = {};
+        (function () {
+            var done = 'done';
+            var target = document.querySelector('body');
+
+            if(target){
+                removeDiscountBadgeTestObservationAug.observer = new MutationObserver(function(mutations) {
+                    applyChanges();
+                });
+                removeDiscountBadgeTestObservationAug.observer.observe(target, {
+                    childList: true,
+                    subtree: true
+                });
+
+                applyChanges();
+            }
+
+            function applyChanges() {
+                var mobileYellowPic = document.querySelector('.mobile-yellow:not(.' + done + '-test)');
+                mobileYellowPic.classList.add('done')
+
+                if (window.innerHeight > 667) {
+                    mobileYellowPic.style.height = 'auto';
+                    mobileYellowPic.classList.add('get-transform-center');
+                } else {
+                    mobileYellowPic.style.height = '100%';
+                    mobileYellowPic.classList.remove('get-transform-center');
+                }
+            }
+        })();
     </script>
 </body>
 
