@@ -2,9 +2,12 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.image-wrapper > div.section {
+
+.image-wrapper>div.section {
   overflow: hidden;
+  width: 100%;
 }
+
 .image-wrapper {
   position: relative;
   -webkit-box-align: center;
@@ -47,7 +50,7 @@
 
 .image-wrapper .link a {
   display: inline-block;
-  height: 120px;
+  height: 100%;
   width: 100%;
 }
 
@@ -239,7 +242,7 @@
   width: 100%;
 }
 
-#section0 > div{
+#section0>div {
   background: rgba(218, 238, 245, 1);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(218, 238, 245, 1)), color-stop(50%, rgba(218, 238, 245, 1)), color-stop(51%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
   background: -o-linear-gradient(top, rgba(218, 238, 245, 1) 0%, rgba(218, 238, 245, 1) 50%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
@@ -316,6 +319,7 @@
 .dot:hover {
   background-color: transparent !important;
 }
+
 /* .mobile #section3>div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,7 +349,8 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.video{
+
+.video {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -355,12 +360,25 @@
   height: 100%;
   overflow: hidden;
 }
+
 .video video {
   width: 100%;
 }
-.get-center{
+
+.get-center {
   margin: 0 auto;
 }
+
+.desktop-first {
+  max-width: 1700px;
+}
+
+#section2 img,
+#section3 img {
+  max-width: 2200px;
+  margin: 0 auto;
+}
+
 @media(max-width: 768px) {
   .desktop {
     display: none;
