@@ -268,11 +268,6 @@
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .desktop #section2>div {
@@ -366,7 +361,19 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
+.video{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+.video video {
+  width: 100%;
+}
 @media(max-width: 768px) {
   .desktop {
     display: none;

@@ -13,11 +13,15 @@
 <body>
     <div class="desktop image-wrapper">
         <div class="section active" id="section0">
-            <img src="image/desktop/top.png" alt="desktop_image">
+            <img class="desktop-first" src="image/desktop/top.png" alt="desktop_image">
         </div>
         <div class="section" id="section1">
-            <iframe src="https://player.vimeo.com/video/353080101?title=0&byline=0&portrait=0" frameborder="0"
-                allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="video">
+                <video controls>
+                    <source src="image/video.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+            </div>
         </div>
         <div class="section" id="section2">
             <div class="wrapper">
@@ -42,8 +46,12 @@
             <img src="image/mobile/top.png" alt="mobile_image">
         </div>
         <div class="section" id="section1">
-            <iframe src="https://player.vimeo.com/video/353080101?title=0&byline=0&portrait=0" frameborder="0"
-                allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="video">
+                <video controls>
+                    <source src="image/video.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+            </div>
         </div>
         <div class="section" id="section2">
             <img class="mobile-yellow" src="image/mobile/mid.png" alt="mobile_image">
@@ -181,8 +189,7 @@
             }
 
             function applyChanges() {
-                var mobileYellowPic = document.querySelector('.mobile-yellow:not(.' + done + '-test)');
-                mobileYellowPic.classList.add('done')
+                var mobileYellowPic = document.querySelector('.mobile-yellow');
 
                 if (window.innerHeight > 667) {
                     mobileYellowPic.style.height = 'auto';
@@ -190,6 +197,34 @@
                 } else {
                     mobileYellowPic.style.height = '100%';
                     mobileYellowPic.classList.remove('get-transform-center');
+                }
+
+                var desktopFirst = document.querySelector('.desktop-first');
+
+                if (window.innerHeight > 820) {
+                    desktopFirst.style.height = 'auto';
+                } else {
+                    desktopFirst.style.height = '100%';
+                }
+
+                var desktopYellow = document.querySelector('.desktop #section2 .wrapper');
+
+                if (window.innerHeight > 820) {
+                    desktopYellow.style.height = 'auto';
+                    desktopYellow.classList.add('get-transform-center');
+                } else {
+                    desktopYellow.style.height = '100%';
+                    desktopYellow.classList.remove('get-transform-center');
+                }
+
+                var desktopThird = document.querySelector('.desktop #section3 .wrapper');
+
+                if (window.innerHeight > 820) {
+                    desktopThird.style.height = 'auto';
+                    desktopThird.classList.add('get-transform-center');
+                } else {
+                    desktopThird.style.height = '100%';
+                    desktopThird.classList.remove('get-transform-center');
                 }
             }
         })();
