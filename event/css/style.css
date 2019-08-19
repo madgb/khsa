@@ -385,7 +385,13 @@
 .desktop-first {
   max-width: 1700px;
 }
-
+.mobile #section1 .fp-tableCell {
+  position: relative;
+}
+.mobile #section1 .fp-tableCell .mobile-title{
+  position: absolute;
+  padding-top: 20px;
+}
 #section2 img,
 #section3 img {
   max-width: 2200px;
